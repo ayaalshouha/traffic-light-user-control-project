@@ -63,6 +63,9 @@
     <EmbeddedResource Include="cntrlTrafficLight.resx">
       <DependentUpon>cntrlTrafficLight.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,6 +97,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRL.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRL.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
