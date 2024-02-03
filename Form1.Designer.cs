@@ -35,16 +35,12 @@
             // 
             this.cntrlTrafficLight1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cntrlTrafficLight1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cntrlTrafficLight1.GreenTime = 0;
-            this.cntrlTrafficLight1.Location = new System.Drawing.Point(109, 24);
+            this.cntrlTrafficLight1.GreenTime = 15;
+            this.cntrlTrafficLight1.Location = new System.Drawing.Point(12, 12);
             this.cntrlTrafficLight1.Name = "cntrlTrafficLight1";
-            this.cntrlTrafficLight1.OrangeTime = 0;
-            this.cntrlTrafficLight1.RedTime = 0;
-            this.cntrlTrafficLight1.RoadFourCurrentLight = Traffic_Light_Simple_Project.cntrlTrafficLight.enLights.Red;
-            this.cntrlTrafficLight1.RoadOneCurrentLight = Traffic_Light_Simple_Project.cntrlTrafficLight.enLights.Green;
-            this.cntrlTrafficLight1.RoadThreeCurrentLight = Traffic_Light_Simple_Project.cntrlTrafficLight.enLights.Red;
-            this.cntrlTrafficLight1.RoadTwoCurrentLight = Traffic_Light_Simple_Project.cntrlTrafficLight.enLights.Red;
-            this.cntrlTrafficLight1.Size = new System.Drawing.Size(664, 623);
+            this.cntrlTrafficLight1.OrangeTime = 3;
+            this.cntrlTrafficLight1.RedTime = 15;
+            this.cntrlTrafficLight1.Size = new System.Drawing.Size(235, 213);
             this.cntrlTrafficLight1.TabIndex = 0;
             // 
             // Form1
@@ -52,7 +48,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(883, 703);
+            this.ClientSize = new System.Drawing.Size(750, 515);
             this.Controls.Add(this.cntrlTrafficLight1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
