@@ -56,7 +56,7 @@
             // 
             // LightTimer
             // 
-            this.LightTimer.Interval = 10000;
+            this.LightTimer.Interval = 1000;
             this.LightTimer.Tick += new System.EventHandler(this.LightTimer_Tick);
             // 
             // cntrlTrafficLight
@@ -68,8 +68,7 @@
             this.Controls.Add(this.RoadLabel);
             this.Controls.Add(this.RoadOne);
             this.Name = "cntrlTrafficLight";
-            this.Size = new System.Drawing.Size(235, 213);
-            this.Load += new System.EventHandler(this.cntrlTrafficLight_Load);
+            this.Size = new System.Drawing.Size(200, 195);
             ((System.ComponentModel.ISupportInitialize)(this.RoadOne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
