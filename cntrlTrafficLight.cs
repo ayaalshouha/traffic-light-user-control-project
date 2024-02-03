@@ -13,17 +13,6 @@ namespace Traffic_Light_Simple_Project
 {
     public partial class cntrlTrafficLight : UserControl
     {
-        public string Label
-        {
-            get
-            {
-                return RoadLabel.Text;
-            }
-            set
-            {
-                RoadLabel.Text = value;
-            }
-        }
         public class TraficLightEventArgs : EventArgs
         {
             public enLights CurrentLight { get; }
@@ -69,14 +58,46 @@ namespace Traffic_Light_Simple_Project
             GreenLightOn?.Invoke(this, e);
         }
 
+        private int _RedTime = 10;
+        private int _OrangeTime = 3;
+        private int _GreenTime = 10;
 
         public enum enLights { Red, Orange, Green }
 
-        public enLights CurrentLight = enLights.Red;
+        private enLights _CurrentLight;
+        public enLights CurrentLight
+        {
+            get
+            {
+                return _CurrentLight;
+            }
+            set
+            {
+                _CurrentLight = value;
 
-        private int _RedTime  = 10;
-        private int _OrangeTime  = 3;
-        private int _GreenTime = 10;
+                switch (_CurrentLight)
+                {
+                    case enLights.Red:
+                        LightImage.Image = Resources.Red1;
+                        break;
+                    case enLights.Green:
+                        LightImage.Image = Resources.Green1;
+                        break;
+                    case enLights.Orange:
+                        LightImage.Image = Resources.Orange1;
+                        break;
+                    default:
+                        LightImage.Image = Resources.Red1;
+                        break;
+                }
+            }
+        }
+
+        public string Label
+        {
+            get { return RoadLabel.Text; }
+            set { RoadLabel.Text = value; }
+        }
         public int RedTime
         {
             get { return _RedTime; }
@@ -121,7 +142,7 @@ namespace Traffic_Light_Simple_Project
             LightTimer.Start();
         }
 
-        private enLights NextLightAfterOrange; 
+        private enLights NextLightAfterOrange = enLights.Green; 
         private void _ChangeLight()
         {
             switch(CurrentLight)
@@ -136,11 +157,13 @@ namespace Traffic_Light_Simple_Project
 
                 case enLights.Orange:
 
-                    //red or green 
+                    //change orange to red or green 
+
                     if (NextLightAfterOrange == enLights.Green)
                     {
                         CurrentLight = enLights.Green;
                         _CurrentTimerValue = GreenTime;
+                        NextLightAfterOrange = enLights.Red;
                         RaiseGreenLightOn();
                         break;
                     }
@@ -148,6 +171,7 @@ namespace Traffic_Light_Simple_Project
                     {
                         CurrentLight = enLights.Red;
                         _CurrentTimerValue = RedTime;
+                        NextLightAfterOrange = enLights.Green;
                         RaiseRedLightOn();
                         break;
                     }
@@ -176,7 +200,6 @@ namespace Traffic_Light_Simple_Project
         public void Stop()
         {
             LightTimer.Stop();
-
         }
 
     }

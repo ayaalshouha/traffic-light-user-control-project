@@ -24,25 +24,29 @@ namespace Traffic_Light_Simple_Project
 
         private void cntrlTrafficLight1_RedLightOn(object sender, cntrlTrafficLight.TraficLightEventArgs e)
         {
-            cntrlTrafficLight2.CurrentLight = cntrlTrafficLight.enLights.Green; 
+            cntrlTrafficLight1.Stop();
+            cntrlTrafficLight2.CurrentLight = cntrlTrafficLight.enLights.Orange; 
             cntrlTrafficLight2.Start();
         }
 
         private void cntrlTrafficLight2_RedLightOn(object sender, cntrlTrafficLight.TraficLightEventArgs e)
         {
-            cntrlTrafficLight3.CurrentLight = cntrlTrafficLight.enLights.Green; 
+            cntrlTrafficLight2.Stop();
+            cntrlTrafficLight3.CurrentLight = cntrlTrafficLight.enLights.Orange; 
             cntrlTrafficLight3.Start();
         }
 
         private void cntrlTrafficLight3_RedLightOn(object sender, cntrlTrafficLight.TraficLightEventArgs e)
         {
-            cntrlTrafficLight4.CurrentLight = cntrlTrafficLight.enLights.Green; 
+            cntrlTrafficLight3.Stop();
+            cntrlTrafficLight4.CurrentLight = cntrlTrafficLight.enLights.Orange; 
             cntrlTrafficLight4.Start();
         }
 
         private void cntrlTrafficLight4_RedLightOn(object sender, cntrlTrafficLight.TraficLightEventArgs e)
         {
-            cntrlTrafficLight1.CurrentLight = cntrlTrafficLight.enLights.Green; 
+            cntrlTrafficLight4.Stop();
+            cntrlTrafficLight1.CurrentLight = cntrlTrafficLight.enLights.Orange; 
             cntrlTrafficLight1.Start();
         }
     }

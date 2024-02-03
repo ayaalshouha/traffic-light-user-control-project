@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.RoadOne = new System.Windows.Forms.PictureBox();
+            this.LightImage = new System.Windows.Forms.PictureBox();
             this.RoadLabel = new System.Windows.Forms.Label();
             this.LightTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.RoadOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LightImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // RoadOne
+            // LightImage
             // 
-            this.RoadOne.Image = global::Traffic_Light_Simple_Project.Properties.Resources.Red1;
-            this.RoadOne.Location = new System.Drawing.Point(81, 32);
-            this.RoadOne.Name = "RoadOne";
-            this.RoadOne.Size = new System.Drawing.Size(72, 139);
-            this.RoadOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.RoadOne.TabIndex = 3;
-            this.RoadOne.TabStop = false;
+            this.LightImage.Image = global::Traffic_Light_Simple_Project.Properties.Resources.Red1;
+            this.LightImage.Location = new System.Drawing.Point(81, 32);
+            this.LightImage.Name = "LightImage";
+            this.LightImage.Size = new System.Drawing.Size(72, 139);
+            this.LightImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LightImage.TabIndex = 3;
+            this.LightImage.TabStop = false;
             // 
             // RoadLabel
             // 
@@ -66,17 +66,17 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.RoadLabel);
-            this.Controls.Add(this.RoadOne);
+            this.Controls.Add(this.LightImage);
             this.Name = "cntrlTrafficLight";
-            this.Size = new System.Drawing.Size(200, 195);
-            ((System.ComponentModel.ISupportInitialize)(this.RoadOne)).EndInit();
+            this.Size = new System.Drawing.Size(246, 236);
+            ((System.ComponentModel.ISupportInitialize)(this.LightImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox RoadOne;
+        private System.Windows.Forms.PictureBox LightImage;
         private System.Windows.Forms.Label RoadLabel;
         private System.Windows.Forms.Timer LightTimer;
     }
